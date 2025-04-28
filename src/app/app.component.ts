@@ -1,20 +1,11 @@
-import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
   templateUrl: './app.component.html',
+  standalone: false,
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
   title = 'angular-concepts';
-  public count = signal(0);
-
-  public increaseCount = () => {
-    this.count.update(value => value + 1);
-  }
-  public decreaseCount = () => {
-    this.count.update(value => value - 1);
-  }
 }
